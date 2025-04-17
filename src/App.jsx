@@ -4,9 +4,6 @@ import Home from './Pages/Home'
 import Certificate from './Pages/Certificate'
 
 
-
-
-
 function App() {
   
 

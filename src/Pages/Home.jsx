@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import Certificate from './Certificate';
 
 
 const Home = () => {
@@ -9,7 +8,7 @@ const Home = () => {
         <div>
             <p>Home</p>
             <p>
-                <Link to={"/certificate"}  >Click</Link>
+                <Link to={"/certificate"}>Click</Link>
             </p>
         </div>
     
