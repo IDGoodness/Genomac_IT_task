@@ -1,15 +1,28 @@
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const Home = () => {
+function Home(){
+  const [name, setName] = useState("");
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    localStorage.setItem("name", name);
+    navigate("/certificate");
+  };
   return (
     <>
         <div>
-            <p>Home</p>
-            <p>
-                <Link to={"/certificate"}>Click</Link>
-            </p>
+            <h1>Certificate Generator</h1>
+            <form action="" onSubmit={handleSubmit}>
+              <div>
+                <input type="text"  placeholder='Your Name' value={name} onChange={(e) => setName(e.target.value)} />
+              </div>
+              <button type='submit'>Generate Certificate</button>
+            </form>
         </div>
     
     </>
